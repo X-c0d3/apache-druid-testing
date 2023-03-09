@@ -1,0 +1,20 @@
+git clone https://github.com/apache/druid.git
+cd druid/distribution/docker
+docker-compose up -d
+
+
+
+http://localhost:8888
+
+
+update evironment file for add kafka
+ - just add "druid-kafka-indexing-service"
+druid_extensions_loadList=["druid-histogram", "druid-datasketches", "druid-lookups-cached-global", "postgresql-metadata-storage", "druid-multi-stage-query","druid-kafka-indexing-service"]
+
+
+docker-compose down
+docker-compose up -d
+
+
+
+https://github.com/adityajoshi12/kafka-nodejs
